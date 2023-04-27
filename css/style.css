@@ -417,8 +417,8 @@ td{
     .form > div{
         margin-left: 0rem;
         margin-right: 0rem;
-        padding-left: 0rem;
-        padding-right: 0rem;
+        /* padding-left: 0rem;
+        padding-right: 0rem; */
     }
     
     .form > div > div > div{
@@ -487,6 +487,40 @@ td{
         top: 7rem;
         left: 0;
     }
+    
+    #product-info-title1{
+        margin-top: 1.0rem;
+    }
+    #quantity-title1, #quantity-title2{
+        margin-top: 2.5rem;
+    }
+    #totalPrice-title-cherry, #totalPrice-title-mango{
+        margin-top: 2rem;
+        
+    }
+    #quantity-controller-cherry, #quantity-controller-mango{
+        margin-top: 1.5rem;
+    }
+    #totalPrice{
+        margin-top: 1.0rem;
+    }
+    #myCart > div:nth-child(2){
+        /* padding-top: 35px; */
+    }
+    #product-info-title2{
+        margin-top: 1.0rem;
+
+    }
+    #product-name-mango, #product-name-cherry{
+        margin-top: 1.0rem;
+    }
+    .cart-cross-icon{
+        margin-top: 1.3rem !important;
+    }
+
+
+    
+    
     /* Step4 */
     #step4{
         width: 100%;
