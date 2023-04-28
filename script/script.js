@@ -3,7 +3,7 @@ let currentForm = 1;
 userData.cart= [];
 let bill ={};
 
-//Step1 Submision
+//Basic Details Submision
 const validateFormStep1 = (e)=>{
     // userData storing and animation
     for(let i=0; i<e.target.length-2; i++){
@@ -12,7 +12,7 @@ const validateFormStep1 = (e)=>{
     sessionStorage.setItem('userData', JSON.stringify(userData));
 
 }
-//Step2 Submision
+//Password Change Submision
 const validateFormStep2 = (e)=>{
     // userData storing and animation
     for(let i=0; i<e.target.length-2; i=i+2){
@@ -21,7 +21,7 @@ const validateFormStep2 = (e)=>{
     sessionStorage.setItem('userData', JSON.stringify(userData));
 }
 
-//Step3 Submision
+//My Cart Submision
 const validateFormStep3 = (e)=>{
     userData.cart = [];
     for(let i=0; i<e.target.length-2; i++){
@@ -36,7 +36,7 @@ const validateFormStep3 = (e)=>{
     sessionStorage.setItem('userData', JSON.stringify(userData));
 }
 
-//Step4 Submision
+//Cart Total Submision
 const checkOut = ()=>{ 
     location.reload();
     let data = 
