@@ -15,38 +15,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+
 </head>
 
-<body>
-    <div id="main" class="container">
+<body class="d-flex align-items-center justify-content-center">
+    <div id="main" class="container-md px-md-5 px-xs-2">
         <!-- Icons Row -->
         <div id="icons-row" class="row">
-            <div class="col-3">
-                <div class="step1-img-con" onclick="nextPrevAnimation(99, 1);">
-                    <img id="step1-img" src="images/h-step-1.webp" alt="">
-                </div>
-                <span>Step 01</span>
-            </div>
-            <div class="col-3">
-                <div class="step2-img-con" onclick="nextPrevAnimation(99, 2);">
-                    <img id="step2-img" src="images/step-2.webp" alt="">
-                </div>
-                <span>Step 02</span>
-            </div>
-            <div class="col-3">
-                <div class="step3-img-con" onclick="nextPrevAnimation(99, 3);">
-                    <img id="step3-img" src="images/step-3.webp" alt="">
-                </div>
-                <span>Step 03</span>
-            </div>
-            <div class="col-3">
-                <div class="step4-img-con" onclick="nextPrevAnimation(99, 4);">
-                    <img id="step4-img" src="images/step-4.webp" alt="">
-                </div>
-                <span>Step 04</span>
-            </div>
+
         </div>
-        <!-- Form -->
+        <!-- Main Form Container -->
         <div id="form-row" class="form-row row">
             <div class="container">
 
@@ -57,68 +36,71 @@
                             <h3>Basic Details</h3>
                         </div>
                     </div>
-                    <form id="step1-form" class="form row"
-                        onsubmit="event.preventDefault(); validateFormStep1(event); nextPrevAnimation(1);">
-                        <div id="basic-detail-row1" class="row">
-                            <div class="col-md-6 basic-detail-row">
+                    <form id="step1-form" class="form col-md-11"
+                        onsubmit="event.preventDefault(); validateFormStep1(event);">
+                        <div class="row mx-0 px-0">
+                            <div class="col-md-6 basic-detail-inner-row">
                                 <div class="position-relative">
-                                    <input id="fname" name="fname" required type="text" placeholder="First Name"><i
-                                        class="bi bi-person-fill"></i>
+                                    <input id="fname" name="fname" type="text" onkeydown="emptyChecker(event);"
+                                        placeholder="First Name"><i class="bi bi-person-fill"></i>
                                 </div>
                             </div>
-                            <div class="col-md-6 basic-detail-row">
+                            <div class="col-md-6 basic-detail-inner-row">
                                 <div class="position-relative">
-                                    <input id="lname" name="lname" required type="text" placeholder="Last Name"><i
-                                        class="bi bi-person-fill"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="basic-detail-row2" class="row">
-                            <div class="col-md-6 basic-detail-row">
-                                <div class="position-relative">
-                                    <input id="email" name="email" required type="email" placeholder="Email ID"><i
-                                        class="bi bi-envelope"></i>
-                                </div>
-                            </div>
-                            <div class="col-md-6 basic-detail-row">
-                                <div class="position-relative">
-                                    <input id="userId" name="userId" required type="text" placeholder="Your User ID"><i
-                                        class="bi bi-person-square"></i>
+                                    <input id="lname" name="lname" type="text" onkeydown="emptyChecker(event);"
+                                        placeholder="Last Name"><i class="bi bi-person-fill"></i>
                                 </div>
                             </div>
                         </div>
-                        <div id="basic-detail-row3" class="row">
-                            <div class="col-md-6 basic-detail-row">
+                        <div class="row  mx-0 px-0">
+                            <div class="col-md-6 basic-detail-inner-row">
                                 <div class="position-relative">
-                                    <input id="country" name="country" required type="text" placeholder="Country"><i
-                                        class="bi bi-map"></i>
+                                    <input id="email" name="email" type="email" onkeydown="emptyChecker(event);"
+                                        placeholder="Email ID"><i class="bi bi-envelope"></i>
                                 </div>
                             </div>
-                            <div class="col-md-6 basic-detail-row">
+                            <div class="col-md-6 basic-detail-inner-row">
+                                <div class="position-relative">
+                                    <input id="userId" name="userId" type="text" onkeydown="emptyChecker(event);"
+                                        placeholder="Your User ID"><i class="bi bi-person-square"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row  mx-0 px-0">
+                            <div class="col-md-6 basic-detail-inner-row">
+                                <div class="position-relative">
+                                    <input id="country" name="country" type="text" onkeydown="emptyChecker(event);"
+                                        placeholder="Country"><i class="bi bi-map"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-6 basic-detail-inner-row">
                                 <div class="row">
                                     <div id="basic-detail-state" class="col-md-6">
-                                        <input id="state" name="state" required type="text" placeholder="State">
+                                        <input id="state" name="state" type="text" onkeydown="emptyChecker(event);"
+                                            placeholder="State">
                                         <i class="bi bi-geo-alt-fill"></i>
                                     </div>
-                                    <div id="basic-detail-city" class="col-md-6">
-                                        <input id="city" name="city" required type="text" placeholder="City">
+                                    <div id="basic-detail-city" class="col-md-6 mt-md-0 mt-3">
+                                        <input id="city" name="city" type="text" onkeydown="emptyChecker(event);"
+                                            placeholder="City">
                                         <i class="bi bi-geo-alt-fill"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="basic-detail-row4" class="row">
-                            <div class="col-md-6 basic-detail-row">
+                        <div class="row mx-0 px-0">
+                            <div class="col-md-6 basic-detail-inner-row">
                                 <div class="position-relative">
-                                    <input id="phoneNum" name="phoneNum" required type="tel" pattern="[0-9]{4}-[0-9]{7}"
-                                        placeholder="0300-1122334"><i class="bi bi-phone"></i>
+                                    <input id="phoneNum" name="phoneNum" type="tel" onkeydown="emptyChecker(event);"
+                                        pattern="[0-9]{4}-[0-9]{7}" placeholder="0300-1122334"><i
+                                        class="bi bi-phone"></i>
                                 </div>
                             </div>
-                            <div class="col-md-6 basic-detail-row">
+                            <div class="col-md-6 basic-detail-inner-row">
                                 <div class="position-relative">
-                                    <input id="refCoder" name="refCoder" required type="password"
-                                        placeholder="Reference Coder"><i class="bi bi-eye-fill"
-                                        onclick="showPassword(event, 'refCoder');"></i>
+                                    <input id="refCoder" name="refCoder" type="password"
+                                        onkeydown="emptyChecker(event);" placeholder="Reference Coder"><i
+                                        class="bi bi-eye-fill" onclick="showPassword(event, 'refCoder');"></i>
                                 </div>
 
                             </div>
@@ -128,7 +110,7 @@
 
                         <!-- Footer Buttons -->
                         <div id="basic-detail-footer" class="form-footer-btn">
-                            <button type="button" onclick="nextPrevAnimation(-1)">BACK</button>
+                            <button type="button" disabled onclick="nextPrevAnimation(-1)">BACK</button>
 
                             <button id="next1" type="submit" onclick={}>CONTINUE</button>
                         </div>
@@ -142,33 +124,37 @@
                             <h3>PASSWORD CHANGE</h3>
                         </div>
                     </div>
-                    <form id="password-change" class="form row"
-                        onsubmit="event.preventDefault(); validateFormStep2(event); nextPrevAnimation(1);">
-                        <div class="col-md-12">
+                    <form id="password-change" class="form col-md-11 px-2 px-md-3"
+                        onsubmit="event.preventDefault(); validateFormStep2(event);">
+                        <div class="col-md-12 mx-0 px-0">
                             <div id="currentPass-con">
-                                <input id="currentPass" name="currentPass" required type="password"
-                                    placeholder="Current Password"><i class="bi bi-lock"
-                                    onclick="showPassword(event, 'currentPass')"></i>
+                                <input id="currentPass" name="currentPass" type="password"
+                                    placeholder="Current Password" onkeydown="emptyChecker(event);"
+                                    onkeyup="conPasswordValidate('currentPass', 'conCurrentPass');">
+                                <i class="bi bi-lock" onclick="showPassword(event, 'currentPass')"></i>
                             </div>
                             <div id="conCurrentPass-con">
-                                <input id="conCurrentPass" name="conCurrentPass" required type="password"
-                                    placeholder="Enter the Current Password"><i class="bi bi-lock"
-                                    onclick="showPassword(event, 'conCurrentPass')"></i>
+                                <input id="conCurrentPass" name="conCurrentPass" type="password"
+                                    placeholder="Enter the Current Password" onkeydown="emptyChecker(event);"
+                                    onkeyup="conPasswordValidate('currentPass', 'conCurrentPass');">
+                                <i class="bi bi-lock" onclick="showPassword(event, 'conCurrentPass')"></i>
                             </div>
                             <div id="newPass-con">
-                                <input id="newPass" name="newPass" required type="password"
-                                    placeholder="New Password"><i class="bi bi-lock"
-                                    onclick="showPassword(event, 'newPass')"></i>
+                                <input id="newPass" name="newPass" type="password" placeholder=" New Password"
+                                    onkeydown="emptyChecker(event);"
+                                    onkeyup="conPasswordValidate('newPass', 'conNewPass');">
+                                <i class="bi bi-lock" onclick="showPassword(event, 'newPass')"></i>
                             </div>
                             <div id="conNewPass-con">
-                                <input id="conNewPass" name="conNewPass" required type="password"
-                                    placeholder="Confirm New Password"><i class="bi bi-lock"
-                                    onclick="showPassword(event, 'conNewPass')"></i>
+                                <input id="conNewPass" name="conNewPass" type="password"
+                                    placeholder="Confirm New Password" onkeydown="emptyChecker(event);"
+                                    onkeyup="conPasswordValidate('newPass', 'conNewPass');">
+                                <i class="bi bi-lock" onclick="showPassword(event, 'conNewPass')"></i>
                             </div>
 
                         </div>
                         <!-- Footer Buttons -->
-                        <div class="form-footer-btn">
+                        <div id="password-footer-con" class="form-footer-btn">
                             <button type="button" onclick="nextPrevAnimation(-1)">BACK</button>
 
                             <button id="next1" type="submit" onclick={}>CONTINUE</button>
@@ -186,72 +172,109 @@
                     <form class="form row"
                         onsubmit="event.preventDefault(); nextPrevAnimation(1); validateFormStep3(event); calculateBill();">
                         <div class="container">
-                            <div id="step3-title" class="step3-title row">
+                            <div id="step3-title" class="step3-title row d-none d-md-flex mb-0">
                                 <p class="offset-2 col-3">Product Detail</p>
                                 <p class="col-2">Quantity</p>
                                 <p class="col-4">Total Price</p>
                             </div>
                             <div id="myCart">
+                                <!-- First Item -->
                                 <div id="mycard-p-r1" class="row">
-                                    <div class="col-lg-2 myCart-img-con">
-                                        <img src="images/item1.jpg" alt="">
+                                    <div class="col-12 col-md-2 ">
+                                        <div class="myCart-img-con">
+                                            <img src="images/item1.jpg" alt="">
+                                        </div>
                                     </div>
-                                    <div id="mob-cart-heading" class="col-6">
-                                        <p id="product-info-title1">Product Detail</p>
-                                        <p id="quantity-title1">Quantity</p>
-                                        <p id="totalPrice-title-cherry">Total Price</p>
+                                    <div id="mob-cart-heading" class="col-6 d-block d-md-none mt-4">
+                                        <p>Product Detail</p>
+                                        <p class="mt-4">Quantity</p>
+                                        <p class="mt-2">Total Price</p>
                                     </div>
-                                    <div class="col-sm-2 col-xs-3">
-                                        <h6 id="product-name-cherry" class="product-info product-name">Cherry</h6>
-                                        <h6 class="product-info">$ 35</h6>
-                                    </div>
-                                    <input name="itemName" type="text" value="Cherry" hidden>
-                                    <div id="quantity-controller-cherry" class="col-4 mycart-product2-con">
-                                        <input id="mycart-product1" class="mycart-product1" type="button"
-                                            onclick="event.preventDefault(); quantityUpdate(1, 0, 35);" value="+">
-                                        <input id="quantity" class="quantity" name="quantity" type="button" value="1"
-                                            text="Cherry">
-                                        <input id="mycart-product2" class="mycart-product2" type="button"
-                                            onclick="event.preventDefault(); quantityUpdate(-1, 0, 35);" value="-">
-                                    </div>
-                                    <div class="col-2">
-                                        <input id="totalPrice" class="totalPrice" name="totalPrice" type="button"
-                                            value="$ 35">
-                                    </div>
-                                    <div class="col-2 cart-cross-icon">
-                                        <i class="bi bi-x-circle"></i>
-                                    </div>
-                                </div>
+                                    <div class="col-6 col-md-9">
+                                        <div class="row">
+                                            <div
+                                                class="col-12 col-md-2 d-flex flex-column justify-content-end align-items-center justify-content-md-center">
+                                                <h6 id="product-name-cherry"
+                                                    class="product-info product-name align-self-end align-self-md-start">
+                                                    Cherry
+                                                </h6>
+                                                <h6 class="product-info align-self-end align-self-md-start">$ 35</h6>
+                                            </div>
+                                            <div id="quantity-controller-cherry"
+                                                class="col-12 col-md-5 mycart-product2-con d-flex justify-content-end align-items-center justify-content-md-center">
+                                                <input name="itemName" type="text" value="Cherry" hidden>
+                                                <input id="mycart-product1" class="mycart-product1" type="button"
+                                                    onclick="event.preventDefault(); quantityUpdate(1, 0, 35);"
+                                                    value="+">
+                                                <input id="quantity" class="quantity" name="quantity" type="button"
+                                                    value="1" text="Cherry">
+                                                <input id="mycart-product2" class="mycart-product2" type="button"
+                                                    onclick="event.preventDefault(); quantityUpdate(-1, 0, 35);"
+                                                    value="-">
+                                            </div>
+                                            <div
+                                                class="col-12 col-md-2 d-flex justify-content-end align-items-center justify-content-md-center">
+                                                <input id="totalPrice" class="totalPrice" name="totalPrice"
+                                                    type="button" value="$ 35">
+                                            </div>
 
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="col-12 col-md-1 cart-cross-icon d-flex justify-content-center justify-content-md-start">
+                                        <i class="bi bi-x-circle "></i>
+                                    </div>
+
+                                </div>
+                                <!-- Second Item -->
                                 <div id="mycard-p-r1" class="row">
-                                    <div class="col-2 myCart-img-con">
-                                        <img src="images/item2.jpg" alt="">
+                                    <div class="col-12 col-md-2">
+                                        <div class="myCart-img-con">
+                                            <img src="images/item2.jpg" alt="">
+                                        </div>
                                     </div>
-                                    <div id="mob-cart-heading" class="col-6">
-                                        <p id="product-info-title2">Product Detail</p>
-                                        <p id="quantity-title2">Quantity</p>
-                                        <p id="totalPrice-title-mango">Total Price</p>
+                                    <div id="mob-cart-heading" class="col-6 d-block d-md-none mt-4"">
+                                        <p>Product Detail</p>
+                                        <p class=" mt-4">Quantity</p>
+                                        <p class="mt-2">Total Price</p>
                                     </div>
-                                    <div class="col-sm-2 col-xs-3">
-                                        <h6 id="product-name-mango" class="product-info product-name">Mango</h6>
-                                        <h6 class="product-info">$ 20</h6>
+                                    <div class="col-6 col-md-9">
+                                        <div class="row">
+                                            <div
+                                                class="col-12 col-md-2 d-flex flex-column justify-content-end align-items-center justify-content-md-center">
+                                                <h6 id="product-name-mango"
+                                                    class="product-info product-name align-self-end align-self-md-start">
+                                                    Mango
+                                                </h6>
+                                                <h6 class="product-info align-self-end align-self-md-start">$ 20</h6>
+                                            </div>
+                                            <div id="quantity-controller-mango"
+                                                class="col-12 col-md-5 mycart-product2-con d-flex justify-content-end align-items-center justify-content-md-center">
+                                                <input name="itemName" type="text" value="Mango" hidden>
+                                                <input id="mycart-product1" class="mycart-product1" type="button"
+                                                    onclick="event.preventDefault(); quantityUpdate(1, 1, 20);"
+                                                    value="+">
+                                                <input id="quantity" class="quantity" name="quantity" type="button"
+                                                    value="1" text="Mango">
+                                                <input id="mycart-product2" class="mycart-product2" type="button"
+                                                    onclick="event.preventDefault(); quantityUpdate(-1, 1, 20);"
+                                                    value="-">
+                                            </div>
+                                            <div
+                                                class="col-12 col-md-2 d-flex justify-content-end align-items-center justify-content-md-center">
+                                                <input id="totalPrice" class="totalPrice" name="totalPrice"
+                                                    type="button" value="$ 20">
+                                            </div>
+
+                                        </div>
+
                                     </div>
-                                    <input name="itemName" type="text" value="Mango" hidden>
-                                    <div id="quantity-controller-mango" class="col-4 mycart-product2-con">
-                                        <input id="mycart-product1" class="mycart-product1" type="button"
-                                            onclick="event.preventDefault(); quantityUpdate(1, 1, 20);" value="+">
-                                        <input id="quantity" class="quantity" name="quantity" type="button" value="1"
-                                            text="Mango">
-                                        <input id="mycart-product2" class="mycart-product2" type="button"
-                                            onclick="event.preventDefault(); quantityUpdate(-1, 1, 20);" value="-">
-                                    </div>
-                                    <div class="col-2">
-                                        <input id="totalPrice" class="totalPrice" name="totalPrice" type="button"
-                                            value="$ 20">
-                                    </div>
-                                    <div class="col-2 cart-cross-icon">
+                                    <div
+                                        class="col-12 col-md-1 cart-cross-icon d-flex justify-content-center justify-content-md-start">
                                         <i class="bi bi-x-circle"></i>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -273,39 +296,35 @@
                         </div>
                     </div>
                     <form class="form" onsubmit="event.preventDefault(); nextPrevAnimation(99, 1);">
-                        <div id="cart-total-con" class="cart-total-con">
-
-
-                            <table id="cart-total">
+                        <div id="cart-total-con">
+                            <table class="col-md-8" cellspacing="0">
                                 <tr>
-                                    <th id="subtotal-head">Subtotal</th>
-                                    <td id="subtotal">$110.00</td>
+                                    <th>Subtotal</th>
+                                    <td>$110.00</td>
                                 </tr>
                                 <tr>
                                     <th class="ship">
                                         Shipping:
                                     </th>
-                                    <td id="top-td" align="center" colspan="3">
-                                        <input type="radio" name="ship" id="r-btn1">
-                                        <label id="shippingL" for="r-btn1">Free Shipping</label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="ship"></th>
-                                    <td id="middle-td">
-                                        <input type="radio" name="ship" id="r-btn2">
-                                        <label id="pickupL" for="r-btn2">Local pickup: $0.00</label>
-                                    </td>
-                                </tr>
-                                <tr>
+                                    <td id="top-td" class="row" colspan="">
+                                        <div class="col-12">
+                                            <input type="radio" checked name="ship" id="r-btn1">
+                                            <label id="shippingL" for="r-btn1">Free Shipping</label>
+                                        </div>
+                                        <div class="col-12">
+                                            <input type="radio" name="ship" id="r-btn2">
+                                            <label id="pickupL" for="r-btn2">Local pickup: $0.00</label>
 
-                                    <td id="bottom-td" colspan="2">Calculate shipping</td>
-
+                                        </div>
+                                        <div class="col-12">
+                                            <label for=""> Calculate shipping </label>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>Service <h6 id="service-text">(estimated for Vietnam)</h6>
                                     </th>
-                                    <td id="sl-td">$5.60</td>
+                                    <td>$5.60</td>
                                 </tr>
 
                                 <tr>
@@ -322,8 +341,6 @@
                         </div>
                     </form>
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -335,5 +352,6 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 <script src="script/script.js"></script>
+<script src="script/iconsRow.js"></script>
 
 </html>
