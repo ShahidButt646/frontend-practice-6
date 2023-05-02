@@ -25,7 +25,7 @@ iconsRow.forEach(element => {
     let div = document.createElement('div');
     div.className = 'col-2';
     div.innerHTML = `
-    <div class="icons-img-con" onclick="iconsValidation(event, ${element.imgCallerId}, ${element.imgId});">
+    <div class="icons-img-con d-flex flex-row align-items-center" onclick="iconsValidation(event, ${element.imgCallerId}, ${element.imgId});">
         <img id="step${element.imgId}-img" src="images/step-${element.imgId}.webp" alt="">
     </div>
     <span>Step 0${element.imgId}</span>
