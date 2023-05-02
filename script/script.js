@@ -180,12 +180,10 @@ const showPassword = (e, elmID) => {
 function conPasswordValidate(password, conPassword) {
     console.log(document.getElementById(password).value, document.getElementById(conPassword).value);
     if (document.getElementById(password).value !== document.getElementById(conPassword).value) {
-        document.getElementById(password).setAttribute("data-error", "error");
         document.getElementById(conPassword).setAttribute("data-error", "error");
         return false;
     }
     else if (document.getElementById(password).value == document.getElementById(conPassword).value) {
-        document.getElementById(password).removeAttribute("data-error");
         document.getElementById(conPassword).removeAttribute("data-error");
         return true;
     }
