@@ -12,18 +12,18 @@ const validateFormStep1 = (e) => {
     // userData storing, validation and calling animation
 
     // to focus the first empty field
-    let togle = false;
+    let toggle = false;
     for (let i = 0; i < e.target.length - 2; i++) {
         if (e.target[i].value == "" || e.target[i].value == " ") {
-            if (!togle) {
-                togle = true;
+            if (!toggle) {
+                toggle = true;
                 e.target[i].focus();
             }
             e.target[i].setAttribute("data-error", "error");
         }
         userData[e.target[i].name] = e.target[i].value;
     }
-    if (togle)
+    if (toggle)
         return false;
     nextPrevAnimation(1);
     sessionStorage.setItem('userData', JSON.stringify(userData));
@@ -32,18 +32,18 @@ const validateFormStep1 = (e) => {
 //Password Change Submision - Step2
 const validateFormStep2 = (e) => {
     // userData storing, validating and animation
-    let togle = false;
+    let toggle = false;
     for (let i = 0; i < e.target.length - 2; i++) {
         if (e.target[i].value == "" || e.target[i].value == " ") {
-            if (!togle) {
-                togle = true;
+            if (!toggle) {
+                toggle = true;
                 e.target[i].focus();
             }
             e.target[i].setAttribute("data-error", "error");
         }
         userData[e.target[i].name] = e.target[i].value;
     }
-    if (togle)
+    if (toggle)
         return false;
     if (!conPasswordValidate('currentPass', 'conCurrentPass') || !conPasswordValidate('newPass', 'conNewPass')) {
         alert("password should match");
@@ -127,12 +127,7 @@ function quantityUpdate(num, buttonNumber, price) {
 
 // NextPrev Animation Function
 function nextPrevAnimation(step, toShow) {
-    if (currentForm == 1 && step == -1) {
-        // clearing storage
-        sessionStorage.clear();
-        return false;
-    }
-    else if (currentForm == 4 && step == 1) {
+    if (currentForm == 4 && step == 1) {
         return false;
     }
     if (step == 1) {
@@ -180,12 +175,10 @@ const showPassword = (e, elmID) => {
 function conPasswordValidate(password, conPassword) {
     console.log(document.getElementById(password).value, document.getElementById(conPassword).value);
     if (document.getElementById(password).value !== document.getElementById(conPassword).value) {
-        document.getElementById(password).setAttribute("data-error", "error");
         document.getElementById(conPassword).setAttribute("data-error", "error");
         return false;
     }
     else if (document.getElementById(password).value == document.getElementById(conPassword).value) {
-        document.getElementById(password).removeAttribute("data-error");
         document.getElementById(conPassword).removeAttribute("data-error");
         return true;
     }

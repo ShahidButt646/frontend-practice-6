@@ -23,7 +23,9 @@ body {
     padding-right: 1.5rem;
     margin-bottom: 2.0rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+
 
 }
 
@@ -168,6 +170,8 @@ input:focus {
 
 #basic-detail-footer button:first-child {
     cursor: not-allowed;
+    visibility: hidden;
+
 }
 
 #password-footer-con {
@@ -268,6 +272,10 @@ input:focus {
     margin-bottom: 0.3rem;
 }
 
+#mob-cart-heading>p {
+    color: black !important;
+}
+
 /* Step4 Cart Total */
 #cart-total-con {
     font-size: 0.3rem;
@@ -291,7 +299,7 @@ th {
 td {
     padding-top: 11px;
     padding-bottom: 11px;
-    text-align: right;
+    /* text-align: left; */
 }
 
 #top-td {

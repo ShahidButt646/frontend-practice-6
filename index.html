@@ -15,8 +15,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-
-
 </head>
 
 <body class="d-flex align-items-center justify-content-center">
@@ -109,7 +107,7 @@
 
 
                         <!-- Footer Buttons -->
-                        <div id="basic-detail-footer" class="form-footer-btn">
+                        <div id="basic-detail-footer" class="form-footer-btn mb-4 mb-md-0">
                             <button type="button" disabled onclick="nextPrevAnimation(-1)">BACK</button>
 
                             <button id="next1" type="submit" onclick={}>CONTINUE</button>
@@ -129,25 +127,25 @@
                         <div class="col-md-12 mx-0 px-0">
                             <div id="currentPass-con">
                                 <input id="currentPass" name="currentPass" type="password"
-                                    placeholder="Current Password" onkeydown="emptyChecker(event);"
-                                    onkeyup="conPasswordValidate('currentPass', 'conCurrentPass');">
+                                    placeholder="Current Password" onkeydown="emptyChecker(event);">
                                 <i class="bi bi-lock" onclick="showPassword(event, 'currentPass')"></i>
                             </div>
                             <div id="conCurrentPass-con">
                                 <input id="conCurrentPass" name="conCurrentPass" type="password"
-                                    placeholder="Enter the Current Password" onkeydown="emptyChecker(event);"
+                                    placeholder="Enter the Current Password"
+                                    onkeydown="emptyChecker(event); conPasswordValidate('currentPass', 'conCurrentPass');"
                                     onkeyup="conPasswordValidate('currentPass', 'conCurrentPass');">
                                 <i class="bi bi-lock" onclick="showPassword(event, 'conCurrentPass')"></i>
                             </div>
                             <div id="newPass-con">
                                 <input id="newPass" name="newPass" type="password" placeholder=" New Password"
-                                    onkeydown="emptyChecker(event);"
-                                    onkeyup="conPasswordValidate('newPass', 'conNewPass');">
+                                    onkeydown="emptyChecker(event);">
                                 <i class="bi bi-lock" onclick="showPassword(event, 'newPass')"></i>
                             </div>
                             <div id="conNewPass-con">
                                 <input id="conNewPass" name="conNewPass" type="password"
-                                    placeholder="Confirm New Password" onkeydown="emptyChecker(event);"
+                                    placeholder="Confirm New Password"
+                                    onkeydown="emptyChecker(event); conPasswordValidate('newPass', 'conNewPass');"
                                     onkeyup="conPasswordValidate('newPass', 'conNewPass');">
                                 <i class="bi bi-lock" onclick="showPassword(event, 'conNewPass')"></i>
                             </div>
@@ -234,9 +232,9 @@
                                             <img src="images/item2.jpg" alt="">
                                         </div>
                                     </div>
-                                    <div id="mob-cart-heading" class="col-6 d-block d-md-none mt-4"">
+                                    <div id="mob-cart-heading" class="col-6 d-block d-md-none mt-4">
                                         <p>Product Detail</p>
-                                        <p class=" mt-4">Quantity</p>
+                                        <p class="mt-4">Quantity</p>
                                         <p class="mt-2">Total Price</p>
                                     </div>
                                     <div class="col-6 col-md-9">
@@ -279,7 +277,7 @@
                             </div>
                         </div>
                         <!-- Footer Buttons -->
-                        <div class="form-footer-btn step3-footer">
+                        <div class="form-footer-btn step3-footer mb-4 mb-md-0">
                             <button type="button" onclick="nextPrevAnimation(-1)">BACK</button>
 
                             <button id="next1" type="submit" onclick="">CONTINUE</button>
@@ -297,7 +295,7 @@
                     </div>
                     <form class="form" onsubmit="event.preventDefault(); nextPrevAnimation(99, 1);">
                         <div id="cart-total-con">
-                            <table class="col-md-8" cellspacing="0">
+                            <table class="col-12 col-sm-7 col-md-8 col-lg-8" cellspacing="0">
                                 <tr>
                                     <th>Subtotal</th>
                                     <td>$110.00</td>
