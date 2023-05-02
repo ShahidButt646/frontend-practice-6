@@ -23,7 +23,7 @@ let iconsRow = [
 const parentCon = document.getElementById("icons-row");
 iconsRow.forEach(element => {
     let div = document.createElement('div');
-    div.className = 'col-3';
+    div.className = 'col-2';
     div.innerHTML = `
     <div class="icons-img-con" onclick="iconsValidation(event, ${element.imgCallerId}, ${element.imgId});">
         <img id="step${element.imgId}-img" src="images/step-${element.imgId}.webp" alt="">
